@@ -1,0 +1,745 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/************* Estilos Generales *************/
+:root {
+    --fondo_blanco: #F2F2F2;
+    --fondo_negro: #0E161D;
+    --rojo_contraste: #FF0D39;
+    --blanco_puro: #FFFFFF;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--fondo_blanco);
+}
+
+.contenedor {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.seccion {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.parrafo {
+    text-align: center;
+    font-size: 1.15em;
+    margin-bottom: 1.2em;
+}
+
+.parrafo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.icono {
+    color: var(--rojo_contraste);
+    margin-right: .5em;
+}
+
+.titulo,
+.subtitulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.subtitulo {
+    color: var(--rojo_contraste);
+    font-size: 2rem;
+    padding: 1.3em 0;
+}
+
+h2 {
+    font-size: 2.4em;
+    margin-bottom: 1em;
+}
+
+h2::after {
+	display: block;
+    content: '';
+	height: 30px;
+	width: 100px;
+    margin-right: auto;
+	margin-left: auto;
+	background-image: url("../img/separador.png");
+}
+
+.boton {
+    display: inline-block;
+    height: 2.5em;
+    padding: 0 20px;
+    margin: 0 1em;
+    line-height: 2.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease .3s;
+    color: #eee;
+    background-color: var(--rojo_contraste);
+}
+
+.boton:hover {
+    background-color: var(--blanco_puro);
+    color: var(--rojo_contraste);
+}
+
+.boton:active {
+    transform: scale(.80);
+}
+
+/************* Estilos .hero *************/
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: top center;
+    background-image: url(../img/bg.jpg);
+}
+
+/************* Estilos Menu Principal *************/
+.menu,
+.menu__lateral,
+.menu__login {
+    display: flex;
+}
+
+.menu {
+    padding: 1em 0;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__link {
+    display: inline-block;
+    position: relative;
+    margin: .6em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--fondo_negro);
+}
+
+.menu__link::before {
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 0;
+    background-color: var(--rojo_contraste);
+    top: -.5em;
+    left: 0;
+    transition: all ease-in-out 250ms;
+}
+
+.menu__link:hover::before {
+    width: 100%;
+}
+
+.link__login {
+    font-weight: bold;
+    color: var(--rojo_contraste);
+}
+
+/************* Estilos Informacion Pagina *************/
+.info-evento {
+    margin-top: 3.5em;
+
+}
+
+.info__lugar {
+    font-size: 1.5em;
+}
+
+.horario-contenedor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.titulo__principal {
+    font-size: 6em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+.slogan {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/************* Estilos Menu Sticky *************/
+.nav-sticky {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: var(--fondo_negro);
+}
+
+.menu-sticky,
+.menu-sticky a {
+    color: var(--blanco_puro);
+}
+
+.menu-sticky__logo,
+.menu-sticky__enlaces {
+    display: flex;
+}
+
+.menu-sticky a {
+    display: inline-block;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link-logo {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.menu-sticky__enlaces a {
+    margin-right: 1em;
+    transition: all .3s;
+}
+
+.menu-sticky__enlaces a:hover {
+    border-radius: 5px;
+    background-color: var(--rojo_contraste);
+}
+
+.menu-sticky__enlaces .menu__item:last-child a {
+    color: var(--rojo_contraste);
+    border-radius: 5px;
+    border: 2px solid var(--rojo_contraste);
+}
+
+.menu-sticky__enlaces .menu__item:last-child a:hover {
+    color: var(--blanco_puro);
+}
+
+/************* Estilos Seccion Conferencias *************/
+
+/************* Estilos Seccion Parallax *************/
+.seccion-contador {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-image: url(../img/bg-parallax1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.textos,
+.numeros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.numero,
+.texto {
+    font-family: 'Oswald', sans-serif;
+}
+
+.numero {
+    font-size: 6em;
+    color: var(--rojo_contraste);
+}
+
+.texto {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: var(--blanco_puro);
+}
+
+/************* Estilos Botones *************/
+.set-botones {
+    display: flex;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    justify-content: center;
+}
+
+/************* Estilos Seccion Mapa *************/
+.seccion-mapa,
+.mapa {
+	width: 100%;
+}
+
+.mapa {
+	max-height: 600px;
+}
+
+/************* Estilos Seccion Precios *************/
+.contenedor-precios {
+    display: flex;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+}
+
+.tabla-precio {
+    text-align: center;
+    margin: 0 1.5em;
+    box-shadow: 0px 0px 20px #666;
+    background-color: var(--blanco_puro);
+    transition: all .3s;
+}
+
+.tabla-precio:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 40px #666;
+}
+
+.cabecera-tabla {
+    padding: 2em 6.5em
+}
+
+.paquete {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: .5em;
+}
+.paquete-precio {
+    font-size: 4em;
+    color: var(--rojo_contraste);
+}
+
+sup {
+    opacity: .8;
+}
+
+sub {
+    color: #666;
+}
+
+.beneficio,
+.orden {
+    padding: 1em 0;
+}
+
+.beneficio:nth-child(even) {
+    background-color: rgba(241, 168, 168, 0.603);
+}
+
+.boton-comprar {
+    display: inline-block;
+    margin: 3em 0;
+    padding: 1em 0;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blanco_puro);
+    background-color: #0C1F28;
+    transition: all .4s;
+}
+
+.boton-comprar:hover {
+    color: var(--rojo_contraste);
+    /* background-color: rgba(24, 51, 63, 0.349); */
+}
+
+/************* Estilos Footer *************/
+footer {
+    padding-top: 2em;
+    font-family: 'Oswald', sans-serif;
+    color: var(--blanco_puro);
+    background-color: var(--fondo_negro);
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.encabezado-footer {
+    padding-bottom: 1em;
+    text-transform: uppercase;
+}
+
+footer span { 
+    color: var(--rojo_contraste);
+}
+
+.acerca,
+.noticias,
+.redes-sociales {
+    width: 25%;
+}
+
+.contenedor-footer p {
+    padding-bottom: 10px;
+}
+
+.redes-sociales i {
+    font-size: 2.5em;
+}
+
+.redes-sociales .menu {
+    justify-content: flex-start;
+}
+
+.redes-sociales .menu a {
+    color: var(--blanco_puro);
+    margin: 0 1em;
+}
+
+.redes-sociales .menu i {
+    transition: all .5s;
+}
+
+.facebook:hover i {
+    color: #3b5998;
+}
+
+.twitter:hover i {
+    color: #1dcaff;
+}
+
+.instagram:hover i {
+    color: #8a3ab9;
+}
+
+.texto-footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/************* Estilos Ventana Modal *************/
+#ventana-modal {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .8);
+    transition: all ease .5s;
+}
+
+.login-caja {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    height: 70vh;
+    padding: 100px 3.5em;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.082);
+    color: var(--blanco_puro);
+    background-color: #0B1015;
+}
+
+.avatar {
+    position: absolute;
+    width: 100px;
+    top: -60px;
+    left: calc(50% - 50px);
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: -1.5em;
+    right: -1.5em;
+}
+
+i.cerrar {
+    font-size: 3em;
+    cursor: pointer;
+    color: var(--rojo_contraste);
+}
+
+.cerrar-input {
+    display: none;
+}
+
+.titulo-modal,
+.etiqueta-modal {
+    font-family: 'Oswald', sans-serif;
+}
+
+.titulo-modal {
+    font-size: 3em;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.input-modal,
+.etiqueta-modal,
+.boton-modal {
+    display: block;
+    border: none;
+    outline: none;
+}
+
+.etiqueta-modal {
+    font-size: 25px;
+    padding: 1rem 0; 
+}
+
+.form-modal input {
+    width: 100%;
+    font-size: 1.1em;
+    padding: .5rem 1rem;
+}
+
+.input-modal {
+    border-radius: 5px;
+}
+
+.boton-modal {
+    height: 2.2em;
+    margin: 2.5em 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--blanco_puro);
+    border: 2px solid var(--rojo_contraste);
+    background-color: var(--rojo_contraste);
+    transition: all .3s;
+}
+
+.boton-modal:active {
+    transform: scale(.9);
+}
+
+#ventana-modal:target {
+    top: 0vh;
+}
+
+#ventana-modal .parrafo {
+    text-align: left;
+}
+
+.boton-registro {
+    color: var(--blanco_puro);
+    background-color: #17A2B8;
+}
+
+.boton-registro:hover {
+    color: var(--blanco_puro);
+    background-color: #138496
+}
+
+/************* Estilos Registro Usuarios *************/
+.formulario-registro {
+    display: flex;
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1.5em 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.input-registro,
+.btn {
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.input-registro {
+    width: 100%;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 2px #666;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-clip: var(--blanco_puro);
+}
+
+.input-registro:focus {
+    border-color: rgb(50, 194, 175);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--blanco_puro);
+    background-color: var(--rojo_contraste);
+    transition: all .3s;
+}
+
+.btn-reset {
+    background-color: #0C1F28;
+}
+
+.btn:active {
+    transform: scale(.8);
+}
+
+.etiqueta-registro {
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-self: flex-start;
+}
+
+/************* Estilos Reservaciones *************/
+.paquetes {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.contenedor-dia {
+    display: grid;
+    padding: 2rem 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contenedor-talleres {
+    padding: 1.5em 0;
+}
+
+.nombre-taller,
+.titulo-dia {
+    text-align: center;
+}
+
+.titulo-dia {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--rojo_contraste);
+}
+
+time {
+    color: var(--rojo_contraste);
+    margin: 0 1rem;;
+}
+
+.lista-talleres {
+    list-style: none;
+}
+
+.nombre-taller,
+.lista-talleres li {
+    font-size: 18px;
+}
+
+.nombre-taller {
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contenedor-resumen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#lista-productos {
+    text-align: left;
+    padding: 1em 2.5em;
+    background-color: var(--blanco_puro);
+}
+
+#suma-total {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--rojo_contraste);
+}
+
+.nombre-taller span {
+    display: inline-block;
+    padding-left: 1em;
+    font-size: 1.5rem;
+    color: var(--rojo_contraste);
+}
+
+.extras,
+.total {
+    text-align: center;
+}
+
+.extras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-resumen .nombre-taller {
+    padding: 1.5em;
+    text-transform: uppercase;
+}
+
+.contenedor-resumen .btn {
+    margin: 2rem 0
+}
+
+.contenedor-resumen .btn:hover {
+    background-color: rgb(207, 10, 46);
+}
+
+.paquetes .tabla-precio:hover {
+    transform: none;
+}
+
+.paquetes .boton-comprar:hover {
+    color: var(--blanco_puro);
+}
+
+.input-numero {
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    color: var(--rojo_contraste);
+}
+
+.orden label {
+    display: block;
+}
+
+.lista-check {
+    opacity: .4;
+    transition: all .3s;
+}
+
+/************* Estilos Galeria *************/
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.foto {
+    width: 25%;
+}
+
+.foto img {
+    width: 100%;
+    display: block;
+    opacity: .7;
+    transition: all ease .5s;
+}
+
+.foto img:hover {
+    opacity: 1;
+}

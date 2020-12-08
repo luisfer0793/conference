@@ -1,131 +1,104 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>IT Conferences</title>
-</head>
-<body>
-    <header class="header">
-        <nav class="menu layout-container">
-            <ul class="menu__link-box">
-                <li class="menu__item"><a href="#" class="menu__link">Conferencias</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Calendario</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Invitados</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Reservaciones</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
-            </ul>
-            <ul class="menu__link-box">
-                <li class="menu__item"><a href="#" class="menu__link">Iniciar Sesión</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Registrarse</a></li>
-            </ul>
-        </nav>
-        <div class="header__title-box">
-            <h2 class="header__title">I T <span class="header__title--bold">Conference</span></h2>
-            <h2 class="header__subtitle">El mejor sitio de conferencias de desarrollo de software</h2>
-            <a href="#" class="button">Conoce Mas</a>
+<?php
+    include_once 'includes/templates/header.php';
+?>
+    <!-- ****** CIERRE HEADER DEL SITIO ****** -->
+
+    <section class="seccion seccion-conferencias">
+        <div class="contenedor">
+            <h2 class="titulo">El mejor sitio de conferencias en español</h2>
+            <p class="parrafo">
+            Conference ha sido creada teniéndoles a usted y a expositores en mente. Tanto si se reúne con compañeros, clientes o socios de negocio, sabrá seguro que todas sus conferencias serán fáciles de iniciar y de unirse a ellas, con la interfaz más simple. 
+            </p>
+            <p class="parrafo">
+            ¿Estás organizando un evento o buscas una conferencia impactante con habilidades de comunicación profesionales y la capacidad de mover a las personas a la acción? Esto es exactamente lo que ofrece Conference sobre habilidades de comunicación, en la Ciudad de Mexico y en el extranjero.
+            </p>
+            <p class="parrafo">
+            En este espacio descubrirás conferencias sobre habilidades de comunicación, tecnologías informáticas, diseño gráfico etc. Todo al alcance de un click.
+            </p>
         </div>
-    </header>
-    <nav class="navbar">
-        <div class="navbar-box layout-container">
-            <p class="navbar__title">Conference</p>
-            <ul class="navbar__link-box">
-                <li class="navbar__item"><a href="#" class="navbar__link">Conferencia</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Calendario</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Invitados</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main class="main layout-main">
-        <div class="layout-container--medium">
-            <h1 class="main__title title">El mejor sitio web de conferencias de tecnología</h1>
-            <div class="main__description-grid">
-                <div class="main__description-box">
-                    <h2 class="main__description-title">Ponentes</h2>
-                    <p class="main__description">
-                        En Conference podrás encontrar variada cantidad de expositores con amplia experiencia y conocimientos para compartir.
-                    </p>
+    </section>
+
+    <section class="seccion-contador">
+        <div class="contenedor">
+            <div class="seccion">
+                <div class="numeros">
+                    <p class="numero">6</p>
+                    <p class="numero">15</p>
+                    <p class="numero">3</p>
+                    <p class="numero">9</p>
                 </div>
-                <div class="main__description-box">
-                    <h2 class="main__description-title">Escenarios</h2>
-                    <p class="main__description">
-                        Sabemos que parte de un buen aprendizaje también es influenciado en la comodidad de donde se estudia, en Conference no hay de que preocuparse, siempre encontraremos el mejor lugar para la comodidad de nuestros visitantes.
-                    </p>
-                </div>
-                <div class="main__description-box">
-                    <h2 class="main__description-title">Temas</h2>
-                    <p class="main__description">
-                        Cientos de temas por difundir son parte de nuestro de nuestro pefil; siempre que aprender, siempre algo nuevo por descubrir.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <section class="section__video">
-        <div class="section__video-box">
-            <video class="video" autoplay loop muted>
-                <source src="./video/video-bg.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="section__video-program">
-            <h2 class="title">Programa</h2>
-            <div class="section__video-grid">
-                <div class="section__video-info">
-                    <a href="#" class="section__video-info-link"><i class="section__video-icon icon ion-ios-code"></i>Talleres</a>
-                    <a href="#" class="section__video-info-link"><i class="section__video-icon icon ion-ios-chatbubbles"></i>Conferencias</a>
-                    <a href="#" class="section__video-info-link"><i class="section__video-icon icon ion-ios-people"></i>Seminarios</a>
-                </div>
-                <div class="section__video-info">
-                    <h4>Front End Development</h4>
-                    <p class="section__video-info-description">Conoce las técnicas mas utilizadas para dominar el desarrollo Front End.</p>
-                    <p class="section__video-info-description--small"><i class="section__video-icon icon ion-ios-clock"></i> 15:00</p>
-                    <p class="section__video-info-description--small"><i class="section__video-icon icon ion-ios-calendar"></i> 10 septiembre</p>
-                    <p class="section__video-info-description--small"><i class="section__video-icon icon ion-ios-person"></i> Luis Fernando Jiménez</p>
-                </div>
-                <div class="section__video-info">
-                    <h4>Back End Development</h4>
-                    <p class="section__video-info-description">Conoce las técnicas mas utilizadas para dominar el desarrollo Back End.</p>
-                    <p class="section__video-info-description--small"><i class="section__video-icon icon ion-ios-clock"></i> 15:00</p>
-                    <p class="section__video-info-description--small"><i class="section__video-icon icon ion-ios-calendar"></i> 10 septiembre</p>
-                    <p class="section__video-info-description--small"><i class="section__video-icon icon ion-ios-person"></i> Luis Fernando Jiménez</p>
+                <div class="textos">
+                    <p class="texto">Invitados</p>
+                    <p class="texto">Talleres</p>
+                    <p class="texto">Días</p>
+                    <p class="texto">Conferencias</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section layout-section">
-        <div class="layout-container--medium">
-            <h2 class="title">Próxima Conferencia</h2>
-            <div class="timer__grid">
-                <div class="timer__number-box">
-                    <span class="timer__number">10</span>
-                    <p class="timer__number-description">Días</p>
+
+    <section class="seccion seccion-botones">
+        <div class="contenedor">
+            <h2 class="titulo">Reserva ya tu lugar</h2>
+            <p class="parrafo">No te quedes fuera y reserva ya tu lugar a la conferencia de tu elección.</p>
+            <p class="parrafo">Todo lo relacionado a tecnologías como Diseño Web, Diseño de Apps para moviles, Diseño Web, Seguridad Informática y demás temas los podras encontrar con nosotros.</p>
+            <div class="set-botones">
+                <a href="reservaciones.php" class="boton">Reservaciones</a>
+                <a href="#" class="boton">Calendario</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="seccion-mapa">
+            <!-- <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.9119319193646!2d-103.39176646347774!3d20.653329567295025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428addb0c0d704f%3A0x8d95932ce379c94!2sAv+de+Las+Rosas+2911%2C+Verde+Valle%2C+44550+Guadalajara%2C+Jal.!5e0!3m2!1ses!2smx!4v1474654606218" width="1600" height="550" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.1636044168076!2d-99.10205328455115!3d19.405335886899852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc20d4ff6b6d%3A0xd2a19a4361b56cd2!2sPalacio+de+los+Deportes!5e0!3m2!1ses-419!2smx!4v1529428363932" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+    <section class="seccion seccion-precios">
+        <div class="contenedor">
+            <h2 class="titulo">Precios</h2>
+            <div class="contenedor-precios">
+                <div class="tabla-precio">
+                    <div class="cabecera-tabla">
+                        <h3 class="paquete">Pase por 2 días</h3>
+                        <h3 class="paquete-precio"><sup>$</sup>200</h3>
+                    </div>
+                    <p class="beneficio">Souvenir</p>
+                    <p class="beneficio">Todas las conferencias</p>
+                    <p class="beneficio">Todos los talleres</p>
+                    <a href="reservaciones.php" class="boton-comprar">Comprar</a>
                 </div>
-                <div class="timer__number-box">
-                    <span class="timer__number">15</span>
-                    <p class="timer__number-description">Horas</p>
+                <div class="tabla-precio">
+                    <div class="cabecera-tabla">
+                        <h3 class="paquete">Todos los días</h3>
+                        <h3 class="paquete-precio"><sup>$</sup>300</h3>
+                    </div>
+                    <p class="beneficio">Souvenir</p>
+                    <p class="beneficio">Todas las conferencias</p>
+                    <p class="beneficio">Todos los talleres</p>
+                    <a href="reservaciones.php" class="boton-comprar">Comprar</a>
                 </div>
-                <div class="timer__number-box">
-                    <span class="timer__number">30</span>
-                    <p class="timer__number-description">Minutos</p>
-                </div>
-                <div class="timer__number-box">
-                    <span class="timer__number">25</span>
-                    <p class="timer__number-description">Segundos</p>
+                <div class="tabla-precio">
+                    <div class="cabecera-tabla">
+                        <h3 class="paquete">Pase por 1 día</h3>
+                        <h3 class="paquete-precio"><sup>$</sup>150</h3>
+                    </div>
+                    <p class="beneficio">Souvenir</p>
+                    <p class="beneficio">Todas las conferencias</p>
+                    <p class="beneficio">Todos los talleres</p>
+                    <a href="reservaciones.php" class="boton-comprar">Comprar</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="newsletter section layout-section">
-        <div class="layout-container">
-            <p class="newsletter__title">Suscribete al Newsletter Mensual</p>
-            <h2 class="newsletter__title--bold">CONFERENCE</h2>
-            <a href="#" class="button">Registarse</a>
-        </div>
-    </section>
+
+<?php 
+    include_once 'includes/templates/footer.php';
+?>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
+    
